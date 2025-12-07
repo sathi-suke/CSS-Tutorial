@@ -12,9 +12,35 @@ div div {
 
 
 /* 1. containerクラスにスタイルを適用 */
-
+/*高さが１００pxで３行、幅が１：１：１の３列になるようにトラックの定義　*/
+.container{
+  display:grid;
+  grid-template-rows:100px 100px 100px;
+  grid-template-columns:1fr 1fr 1fr;
+}
 /* 2. containerクラスにスタイルを適用 */
-
+/* div 要素にグリッドレイアウトで高さ100px、３行、幅１００px、３列、*/
+/* 横方向のアイテムの隙間と両サイドの隙間が同じになるように*?*/
+.container{
+  display: grid;
+  grid-template-rows:100px 100px 100px;
+  grid-template-columns:100px 100px 100px;
+  justify-content: space-evenly;
+}
 /* 3. containerクラスにスタイルを適用 */
-
+/* 高さ100px、3行、幅１：１：１の３列トラック定義、各アイテムがトラックの下側 */
+.container{
+  display:grid;
+  grid-template-rows:100px 100px 100px;
+  grid-template-columns:1fr 1fr 1fr;
+  align-items:end;
+}
 /* 4. containerクラスにスタイルを適用 */
+/* 高さ100px、3行、幅１：１：１の３列、トラック間の線は１０px縦線１５０px */
+.container{
+  display:grid;
+  grid-template-rows:100px 100px 100px;
+  grid-template-columns:1fr 1fr 1fr;
+  align-items:stretch;
+  gap:10px 150px;
+}
